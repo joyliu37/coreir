@@ -362,8 +362,8 @@ namespace CoreIR {
     if (!atLastState()) {
       stateIndex++;
     } else {
-      execute();
       stepClock(mainClock);
+      execute();
     }
   }
 
