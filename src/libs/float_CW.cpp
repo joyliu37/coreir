@@ -126,7 +126,7 @@ reg [exp_bits-1:0] exp;
 reg [frac_bits:0] frac;
 wire [7:0] status;
 
-CW_fp_mult #(.sig_width(frac_bits+3), .exp_width(exp_bits), .ieee_compliance(0)) mul1 (.a({in0,3'h0}),.b({in1,3'h0}),.rnd('h1),.z({int_out,results_x}),.status(status));
+CW_fp_mult #(.sig_width(frac_bits+3), .exp_width(exp_bits), .ieee_compliance(0)) mul1 (.a({in0,3'h0}),.b({in1,3'h0}),.rnd('h0),.z({int_out,results_x}),.status(status));
 
 always @(*) begin
   sign = int_out[exp_bits+frac_bits];
